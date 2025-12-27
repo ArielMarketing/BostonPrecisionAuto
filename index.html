@@ -26,21 +26,20 @@
       top: 0;
       z-index: 1000;
       background: var(--gray);
-      padding: 1rem 1.5rem;
-      text-align: center;
+      padding: 0;
       border-bottom: 2px solid var(--green);
     }
 
     /* LOGO BANNER */
     .logo-banner {
       background: var(--gray);
-      padding: 2rem 1.5rem;
+      padding: 1.5rem 1.5rem;
       position: relative;
       text-align: center;
     }
 
     .logo-banner img {
-      width: 360px;
+      width: 340px;
       max-width: 90%;
     }
 
@@ -134,6 +133,7 @@
       margin-bottom: 0.75rem;
     }
 
+    /* GALLERY */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -154,6 +154,7 @@
       transform: scale(1.03);
     }
 
+    /* BOOKING FORM */
     .form-box {
       background: var(--gray);
       padding: 2rem;
@@ -185,6 +186,7 @@
       color: #022c22;
     }
 
+    /* FLOATING CALL BUTTON */
     .float-call {
       position: fixed;
       bottom: 20px;
@@ -253,24 +255,38 @@
   <p style="text-align:center; color:#cbd5e1;">Real auto detailing work similar to what you can expect.</p>
 
   <div class="gallery">
-
-    <!-- Foam Wash -->
     <img src="https://images.pexels.com/photos/4870707/pexels-photo-4870707.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Foam Wash">
-
-    <!-- Interior Detailing -->
     <img src="https://images.pexels.com/photos/4870701/pexels-photo-4870701.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Interior Detailing">
-
-    <!-- Wheel Cleaning -->
     <img src="https://images.pexels.com/photos/4870704/pexels-photo-4870704.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Wheel Cleaning">
-
-    <!-- Polishing -->
     <img src="https://images.pexels.com/photos/4870702/pexels-photo-4870702.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Polishing">
-
-    <!-- Hand Wash -->
     <img src="https://images.pexels.com/photos/4870703/pexels-photo-4870703.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Hand Wash">
-
-    <!-- Tire Shine -->
     <img src="https://images.pexels.com/photos/4870705/pexels-photo-4870705.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Tire Shine">
-
   </div>
 </section>
+
+<section>
+  <h2>Book a Detailing Appointment</h2>
+
+  <!-- NETLIFY FORM -->
+  <form class="form-box" name="booking" method="POST" netlify>
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="text" name="vehicle" placeholder="Vehicle Make & Model" required>
+    <input type="text" name="date" placeholder="Preferred Date" required>
+    <textarea name="details" rows="4" placeholder="Additional Details"></textarea>
+    <button type="submit">Submit Request</button>
+  </form>
+</section>
+
+<section>
+  <h2>Service Area</h2>
+  <p style="text-align:center;">Boston And Greater Area</p>
+</section>
+
+<footer>
+  <p>© 2025 Boston Precision Auto Detailing • Mobile Auto Detailing</p>
+</footer>
+
+<a class="float-call" href="tel:7819274672">📞</a>
+
+</body>
+</html>
