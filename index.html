@@ -3,21 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Boston Precision Auto Detailing | Mobile Detailing</title>
+  <title>Boston Precision Auto Detailing</title>
 
   <style>
+    :root {
+      --dark: #0f172a;
+      --green: #22c55e;
+      --light: #f8fafc;
+      --gray: #1e293b;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
-      line-height: 1.6;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--dark);
+      color: var(--light);
     }
 
     header {
+      background: var(--gray);
       text-align: center;
-      padding: 3rem 1.5rem 4rem;
-      background: linear-gradient(135deg, #020617, #1e293b);
+      padding: 3rem 1.5rem;
     }
 
     header img {
@@ -26,20 +32,19 @@
     }
 
     header h1 {
-      font-size: 2.6rem;
+      font-size: 2.5rem;
       margin-bottom: 0.5rem;
-      color: #f8fafc;
     }
 
     header p {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       max-width: 650px;
-      margin: 0 auto 1.75rem;
+      margin: 0 auto 1.5rem;
       color: #cbd5e1;
     }
 
     .cta {
-      background: #22c55e;
+      background: var(--green);
       color: #022c22;
       padding: 0.9rem 1.6rem;
       border-radius: 10px;
@@ -57,9 +62,8 @@
 
     h2 {
       text-align: center;
-      color: #f8fafc;
-      margin-bottom: 1rem;
       font-size: 2rem;
+      margin-bottom: 1rem;
     }
 
     .services {
@@ -70,23 +74,21 @@
     }
 
     .card {
-      background: #020617;
-      padding: 1.75rem;
-      border-radius: 14px;
-      border: 1px solid #1e293b;
+      background: var(--gray);
+      padding: 1.5rem;
+      border-radius: 12px;
     }
 
     .price {
       font-weight: bold;
-      color: #22c55e;
+      color: var(--green);
       margin-bottom: 0.75rem;
     }
 
-    /* GALLERY */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
       margin-top: 2rem;
     }
 
@@ -95,13 +97,17 @@
       height: 220px;
       object-fit: cover;
       border-radius: 12px;
-      border: 1px solid #1e293b;
+      border: 2px solid var(--gray);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
     }
 
     .quote-box {
-      background: #020617;
-      border: 1px solid #1e293b;
-      border-radius: 14px;
+      background: var(--gray);
+      border-radius: 12px;
       padding: 2rem;
       max-width: 600px;
       margin: 2rem auto 0;
@@ -111,7 +117,7 @@
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      background: #020617;
+      background: var(--gray);
       font-size: 0.9rem;
       color: #9ca3af;
     }
@@ -122,28 +128,24 @@
 
 <header>
   <img src="logo.png" alt="Boston Precision Auto Detailing Logo">
-
   <h1>Boston Precision Auto Detailing</h1>
-  <p>Professional mobile detailing brought directly to your home or workplace. Serving Boston and surrounding areas.</p>
+  <p>Mobile detailing brought to your home or workplace. Serving Boston and surrounding areas.</p>
   <a class="cta" href="tel:7819274672">Call or Text for a Free Quote</a>
 </header>
 
 <section>
   <h2>Our Detailing Packages</h2>
-
   <div class="services">
     <div class="card">
       <h3>Interior Detail</h3>
       <div class="price">Starting at $150</div>
       <p>Deep vacuum, interior wipe-down, carpet and seat cleaning, windows, and stain treatment.</p>
     </div>
-
     <div class="card">
       <h3>Exterior Detail</h3>
       <div class="price">Starting at $150</div>
       <p>Hand wash & dry, wheels and tires cleaned, tire shine, and exterior protection.</p>
     </div>
-
     <div class="card">
       <h3>Full Detail</h3>
       <div class="price">Starting at $200</div>
@@ -155,20 +157,18 @@
 <section>
   <h2>Gallery</h2>
   <p style="text-align:center; color:#cbd5e1;">Real detailing results similar to what you can expect.</p>
-
   <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1607860108855-0a2a7f6e6b1a" alt="Detailing 1">
-    <img src="https://images.unsplash.com/photo-1614200187524-3f3e3d2ad8d3" alt="Detailing 2">
-    <img src="https://images.unsplash.com/photo-1597004891283-5e1b6bbfcd48" alt="Detailing 3">
-    <img src="https://images.unsplash.com/photo-1614200187524-3f3e3d2ad8d3" alt="Detailing 4">
-    <img src="https://images.unsplash.com/photo-1607860108855-0a2a7f6e6b1a" alt="Detailing 5">
-    <img src="https://images.unsplash.com/photo-1597004891283-5e1b6bbfcd48" alt="Detailing 6">
+    <img src="https://images.unsplash.com/photo-1607860108855-0a2a7f6e6b1a?auto=format&fit=crop&w=800&q=80" alt="Detailing 1">
+    <img src="https://images.unsplash.com/photo-1614200187524-3f3e3d2ad8d3?auto=format&fit=crop&w=800&q=80" alt="Detailing 2">
+    <img src="https://images.unsplash.com/photo-1597004891283-5e1b6bbfcd48?auto=format&fit=crop&w=800&q=80" alt="Detailing 3">
+    <img src="https://images.unsplash.com/photo-1607860108855-0a2a7f6e6b1a?auto=format&fit=crop&w=800&q=80" alt="Detailing 4">
+    <img src="https://images.unsplash.com/photo-1614200187524-3f3e3d2ad8d3?auto=format&fit=crop&w=800&q=80" alt="Detailing 5">
+    <img src="https://images.unsplash.com/photo-1597004891283-5e1b6bbfcd48?auto=format&fit=crop&w=800&q=80" alt="Detailing 6">
   </div>
 </section>
 
 <section>
   <h2>Get a Free Quote</h2>
-
   <div class="quote-box">
     <p>Pricing depends on vehicle size and condition. Most details start at <strong>$150</strong>. Contact us for a fast, no‑obligation quote.</p>
     <a class="cta" href="tel:7819274672">Call or Text to Get Your Quote</a>
