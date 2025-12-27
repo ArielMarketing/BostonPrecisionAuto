@@ -20,28 +20,56 @@
       color: var(--light);
     }
 
+    /* Sticky Header */
     header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
       background: var(--gray);
+      padding: 1rem 1.5rem;
       text-align: center;
-      padding: 4rem 1.5rem 3rem;
+      border-bottom: 2px solid var(--green);
     }
 
     header img {
       width: 420px;
       max-width: 90%;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
 
-    header h1 {
-      font-size: 2.6rem;
+    /* HERO SECTION */
+    .hero {
+      background-image: url('https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=1600');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 6rem 1.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
       margin-bottom: 0.5rem;
     }
 
-    header p {
-      font-size: 1.15rem;
+    .hero p {
+      font-size: 1.2rem;
       max-width: 700px;
       margin: 0 auto 1.5rem;
-      color: #cbd5e1;
+      color: #d1d5db;
     }
 
     .cta {
@@ -67,6 +95,7 @@
       margin-bottom: 1rem;
     }
 
+    /* SERVICES */
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -86,6 +115,7 @@
       margin-bottom: 0.75rem;
     }
 
+    /* GALLERY */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -106,13 +136,52 @@
       transform: scale(1.03);
     }
 
-    .quote-box {
+    /* BOOKING FORM */
+    .form-box {
       background: var(--gray);
-      border-radius: 12px;
       padding: 2rem;
+      border-radius: 12px;
       max-width: 600px;
       margin: 2rem auto 0;
-      text-align: center;
+    }
+
+    .form-box input,
+    .form-box textarea {
+      width: 100%;
+      padding: 0.9rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      border: none;
+      background: #0f172a;
+      color: var(--light);
+    }
+
+    .form-box button {
+      width: 100%;
+      padding: 1rem;
+      background: var(--green);
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      color: #022c22;
+    }
+
+    /* FLOATING CALL BUTTON */
+    .float-call {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--green);
+      color: #022c22;
+      padding: 1rem 1.2rem;
+      border-radius: 50%;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 12px rgba(0,0,0,0.4);
+      z-index: 2000;
     }
 
     footer {
@@ -129,10 +198,15 @@
 
 <header>
   <img src="logo.png" alt="Boston Precision Auto Detailing Logo">
-  <h1>Boston Precision Auto Detailing</h1>
-  <p>Mobile detailing brought to your home or workplace. Serving Boston and surrounding areas.</p>
-  <a class="cta" href="tel:7819274672">Call or Text for a Free Quote</a>
 </header>
+
+<div class="hero">
+  <div class="hero-content">
+    <h1>Boston Precision Auto Detailing</h1>
+    <p>Premium mobile detailing delivered to your home or workplace. Serving Boston and surrounding areas.</p>
+    <a class="cta" href="tel:7819274672">Call or Text for a Free Quote</a>
+  </div>
+</div>
 
 <section>
   <h2>Our Detailing Packages</h2>
@@ -159,20 +233,23 @@
   <h2>Gallery</h2>
   <p style="text-align:center; color:#cbd5e1;">Real detailing results similar to what you can expect.</p>
   <div class="gallery">
-    <img src="https://images.pexels.com/photos/8985186/pexels-photo-8985186.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Detailing 1">
-    <img src="https://images.pexels.com/photos/8985190/pexels-photo-8985190.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Detailing 2">
-    <img src="https://images.pexels.com/photos/8985189/pexels-photo-8985189.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Detailing 3">
-    <img src="https://images.pexels.com/photos/8985187/pexels-photo-8985187.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Detailing 4">
-    <img src="https://images.pexels.com/photos/8985188/pexels-photo-8985188.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Detailing 5">
-    <img src="https://images.pexels.com/photos/8985191/pexels-photo-8985191.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Detailing 6">
+    <img src="https://images.pexels.com/photos/8985186/pexels-photo-8985186.jpeg?auto=compress&cs=tinysrgb&w=800">
+    <img src="https://images.pexels.com/photos/8985190/pexels-photo-8985190.jpeg?auto=compress&cs=tinysrgb&w=800">
+    <img src="https://images.pexels.com/photos/8985189/pexels-photo-8985189.jpeg?auto=compress&cs=tinysrgb&w=800">
+    <img src="https://images.pexels.com/photos/8985187/pexels-photo-8985187.jpeg?auto=compress&cs=tinysrgb&w=800">
+    <img src="https://images.pexels.com/photos/8985188/pexels-photo-8985188.jpeg?auto=compress&cs=tinysrgb&w=800">
+    <img src="https://images.pexels.com/photos/8985191/pexels-photo-8985191.jpeg?auto=compress&cs=tinysrgb&w=800">
   </div>
 </section>
 
 <section>
-  <h2>Get a Free Quote</h2>
-  <div class="quote-box">
-    <p>Pricing depends on vehicle size and condition. Most details start at <strong>$150</strong>. Contact us for a fast, no‑obligation quote.</p>
-    <a class="cta" href="tel:7819274672">Call or Text to Get Your Quote</a>
+  <h2>Book a Detailing Appointment</h2>
+  <div class="form-box">
+    <input type="text" placeholder="Your Name">
+    <input type="text" placeholder="Vehicle Make & Model">
+    <input type="text" placeholder="Preferred Date">
+    <textarea rows="4" placeholder="Additional Details"></textarea>
+    <button>Submit Request</button>
   </div>
 </section>
 
@@ -185,6 +262,7 @@
   <p>© 2025 Boston Precision Auto Detailing • Mobile Auto Detailing</p>
 </footer>
 
+<a class="float-call" href="tel:7819274672">📞</a>
+
 </body>
 </html>
-
